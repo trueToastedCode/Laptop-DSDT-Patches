@@ -1,0 +1,15 @@
+# ShutdownFix by trueToastedCode
+
+into method label _PTS code_regex ([\s\S]*) replace_matched
+begin
+        // ShutdownFix\n
+        If (LEqual (Arg0, 0x05))\n
+        {\n
+            Store(Zero, SLPE)\n
+            Sleep (0x10)\n
+        }\n
+        Else\n
+        {\n
+            %1\n
+        }
+end;
